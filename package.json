@@ -1,11 +1,11 @@
 {
   "name": "rbvcfindyourmeal",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "npx prisma generate && next build",
+    "start": "npm install && next start",
     "lint": "next lint"
   },
   "dependencies": {
