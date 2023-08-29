@@ -1,6 +1,4 @@
-import SearchBar from "../components/searchBar";
 import "../globals.css";
-
 
 export default function SearchLayout({
   children,
@@ -8,17 +6,14 @@ export default function SearchLayout({
   children: React.ReactNode;
 }) {
   return (
-      <>
-        <main>
-          <div>         
-            {children}
-          </div>
-        </main>
-      </>
+    <>
+      <main>
+        <div>{children}</div>
+      </main>
+    </>
   );
 }
 
 export const metadata = {
-  title: "Search Restaurants | OpenTable | Clone"
-
-}
+  title: "Search Restaurants | OpenTable | Clone",
+};
