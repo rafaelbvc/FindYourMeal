@@ -1,20 +1,22 @@
-import { NextRequest, NextResponse } from "next/server"; 
+import { NextRequest, NextResponse } from "next/server";
 import * as jose from "jose";
-import jwt from "jsonwebtoken";
 
-export async function middleware(
-  req: NextRequest,
-  res: NextResponse
-) {
+export async function middleware(req: NextRequest, res: NextResponse) {
   const bearerToken = req.headers.get("authorization") as string;
   if (!bearerToken) {
-    return new NextResponse(JSON.stringify({errorMessage:" Unauthorized request"}), {status: 401})
+    return new NextResponse(
+      JSON.stringify({ errorMessage: " Unauthorized request" }),
+      { status: 401 }
+    );
   }
 
   const token = bearerToken.split(" ")[1];
 
   if (!token) {
-    return new NextResponse(JSON.stringify({errorMessage:" Unauthorized request"}), {status: 401})
+    return new NextResponse(
+      JSON.stringify({ errorMessage: " Unauthorized request" }),
+      { status: 401 }
+    );
   }
 
   const secret = new TextEncoder().encode(process.env.JWT_SECRET);
@@ -22,18 +24,24 @@ export async function middleware(
   try {
     await jose.jwtVerify(token, secret);
   } catch (error) {
-    return new NextResponse(JSON.stringify({errorMessage:" Unauthorized request"}), {status: 401})
+    return new NextResponse(
+      JSON.stringify({ errorMessage: " Unauthorized request" }),
+      { status: 401 }
+    );
   }
 
-  const payload = jwt.decode(token) as { email: string };
+  // const payload = jose.jwtDecrypt(token) as { email: string}
+
+  //@ts-ignore
+  const payload = jose.jwtDecrypt(token) as { email: string };
 
   if (!payload.email) {
-    return new NextResponse(JSON.stringify({errorMessage:" Unauthorized request"}), {status: 401})
+    return new NextResponse(
+      JSON.stringify({ errorMessage: " Unauthorized request" }),
+      { status: 401 }
+    );
   }
-
-
 }
-
 
 export const config = {
   matcher: ["/api/auth/authenticated"],
