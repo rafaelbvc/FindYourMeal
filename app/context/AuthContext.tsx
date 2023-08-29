@@ -3,7 +3,7 @@
 import React, { useState, createContext, useEffect } from "react";
 import { getCookie } from "cookies-next";
 import axios from "axios";
-import { baseUrlDev } from "../../utils/urlBase";
+import { baseUrlProd } from "../../utils/urlBase";
 
 interface User {
   id: number;
@@ -58,7 +58,7 @@ export default function AuthContext({
         });
       }
       const response = await axios.get(
-       ` ${baseUrlDev}api/auth/authenticated`,
+        ` ${baseUrlProd}api/auth/authenticated`,
         { headers: { Authorization: `Bearer ${jwt}` } }
       );
 
@@ -69,8 +69,6 @@ export default function AuthContext({
         error: null,
         loading: false,
       });
-
-
     } catch (error: any) {
       setAuthState({
         error: error.response.data.errorMessage,
@@ -90,4 +88,3 @@ export default function AuthContext({
     </AuthenticationContext.Provider>
   );
 }
-
