@@ -1,5 +1,5 @@
 import { FetchRestaurants } from "../services/fetchRestaurants";
-import Header from "./components/Header";
+import Header from "./components/aHeader";
 import RestaurantCard from "./components/RestaurantCard";
 
 const Home = async () => {
