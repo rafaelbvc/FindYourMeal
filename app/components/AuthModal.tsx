@@ -8,9 +8,9 @@ import useAuth from "../../hooks/useAuth";
 import { AuthenticationContext } from "../context/AuthContext";
 import { Alert } from "@mui/material";
 
-interface ILinearDeterminate {
-  LinerarDeterminate: JSX.Element;
-}
+// interface ILinearDeterminate {
+//   LinerarDeterminate: JSX.Element;
+// }
 
 const style = {
   position: "absolute" as "absolute",
