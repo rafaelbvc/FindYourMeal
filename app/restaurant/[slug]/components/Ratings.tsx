@@ -1,5 +1,5 @@
 import { calculateReviewRatingAverage } from "../../../../utils/calculateReviewRatingAverage";
-import Stars from "../../../components/stars";
+import Stars from "../../../components/astars";
 
 type ReviewType = {
   id: number,
