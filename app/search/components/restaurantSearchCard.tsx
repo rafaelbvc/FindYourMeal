@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Price from "../../components/aprice";
+import Price from "../../components/Price";
 import RestaurantSearchCartdType from "../../interfaces/restaurantSearchCardType";
 import { calculateReviewRatingAverage } from "../../../utils/calculateReviewRatingAverage";
-import stars from "../../components/astars";
+import stars from "../../components/Stars";
 
 const RestaurantSearchCard = ({restaurant}: RestaurantSearchCartdType) => {
 

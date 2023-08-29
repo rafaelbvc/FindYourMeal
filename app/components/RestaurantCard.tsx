@@ -1,7 +1,7 @@
 import Link from "next/link";
 import  {RestaurantCardType}  from "../interfaces/restaurantCardType";
-import Price from "./aprice";
-import Stars from "./astars";
+import Price from "./Price";
+import Stars from "./Stars";
 import { calculateReviewRatingAverage } from "../../utils/calculateReviewRatingAverage";
 
 interface Props {

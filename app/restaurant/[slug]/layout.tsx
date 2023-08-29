@@ -1,5 +1,5 @@
 import { FetchRestaurantBySlug } from "../../../services/fetchRestaurantsBySlug";
-import RestaurantHeader from "./components/restaurantHeader";
+import RestaurantHeader from "./components/RestaurantHeader";
 import "react-datepicker/dist/react-datepicker.css";
 
 

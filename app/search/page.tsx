@@ -1,4 +1,4 @@
-import Header from "../components/aHeader";
+import Header from "../components/Header";
 
 import SearchSideBar from "./components/searchSideBar";
 import { FetchRestaurantsByFilters } from "../../services/fetchRestaurantsByFilters"
