@@ -1,4 +1,4 @@
-import Stars from "../../../components/astars";
+import Stars from "../../../components/Stars";
 
 type ReviewCardType = {
   review: {
