@@ -2,7 +2,7 @@ import axios from "axios";
 import { AuthenticationContext } from "../app/context/AuthContext";
 import { useContext } from "react";
 import { removeCookies } from "cookies-next";
-import { baseUrlDev } from "../utils/urlBase";
+import { baseUrlProd } from "../utils/urlBase";
 
 const useAuth = () => {
   const { setAuthState } = useContext(AuthenticationContext);
@@ -23,7 +23,7 @@ const useAuth = () => {
       loading: true,
     });
     try {
-      const response = await axios.post(`${baseUrlDev}/api/auth/signin`, {
+      const response = await axios.post(`${baseUrlProd}/api/auth/signin`, {
         email,
         password,
       });
@@ -66,7 +66,7 @@ const useAuth = () => {
       loading: true,
     });
     try {
-      const response = await axios.post(`${baseUrlDev}api/auth/signup`, {
+      const response = await axios.post(`${baseUrlProd}api/auth/signup`, {
         firstName,
         lastName,
         email,

@@ -8,7 +8,7 @@ const Home = async () => {
   return (
     <main>
       <Header />
-      <div className="mx-auto py-3 px-48 mt-10 flex flex-wrap">
+      <div className=" py-3 px-48 mt-10 flex flex-wrap">
         {restaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.id} restaurant={restaurant} />
         ))}
