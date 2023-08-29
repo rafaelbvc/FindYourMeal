@@ -8,6 +8,10 @@ import useAuth from "../../hooks/useAuth";
 import { AuthenticationContext } from "../context/AuthContext";
 import { Alert } from "@mui/material";
 
+interface ILinearDeterminate {
+  LinerarDeterminate: JSX.Element;
+}
+
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -24,7 +28,7 @@ const style = {
 
 export default function AuthModal({ isSignin }: { isSignin: boolean }) {
   const { signin, signup } = useAuth();
-  const { loading , error } = useContext(AuthenticationContext);
+  const { loading, error } = useContext(AuthenticationContext);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -100,7 +104,7 @@ export default function AuthModal({ isSignin }: { isSignin: boolean }) {
         <Box sx={style}>
           {loading ? (
             <div className="px-0.5 pt-10 w-[25rem] h-[40rem] flex ">
-              <LinearDeterminate />
+              {/* <LinearDeterminate /> */}
             </div>
           ) : (
             <div className="p-2">

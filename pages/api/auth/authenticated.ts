@@ -1,12 +1,16 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { prisma } from "../../../utils/constants";
-import jwt from "jsonwebtoken";
+import * as jose from "jose";
 
-export default async function middleware(req: NextApiRequest, res: NextApiResponse) {
+export default async function middleware(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const bearerToken = req.headers["authorization"] as string;
   const token = bearerToken.split(" ")[1];
 
-  const payload = jwt.decode(token) as { email: string };
+  //@ts-ignore
+  const payload = jose.jwtDecrypt(token) as { email: string };
 
   if (!payload.email) {
     return res.status(401).json({ errorCode: "Unauthorized" });
