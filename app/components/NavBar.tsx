@@ -4,7 +4,7 @@ import Link from "next/link";
 import useAuth from "../../hooks/useAuth";
 import { useContext } from "react";
 import { AuthenticationContext } from "../context/AuthContext";
-import AuthModal from "./authModal";
+import AuthModal from "./AuthModal";
 import GitHubSVG from "./icons/GitHubSVG";
 import TableIcon from "./icons/TableIconSVG";
 import LinkedInSVG from "./icons/LinkedInSVG";
