@@ -61,7 +61,7 @@ const ReservationCard = ({
   return (
     <menu className="relative bg-white rounded p-3 shadow">
       <div className="text-center border-b pb-2 font-bold">
-        <h4 className="mr-7 text-lg">Make a Reservation</h4>
+        <h4 className="mr-7 text-lg text-black">Make a Reservation</h4>
       </div>
       <menu className="my-3 flex flex-col">
         <label htmlFor="">Party Size</label>
@@ -114,7 +114,7 @@ const ReservationCard = ({
       </div>
       {data && data.length ? (
         <div className="mt-4">
-          <p className="text-reg">Select a Time</p>
+          <p className="text-reg text-black">Select a Time</p>
           <div className="flex flex-wrap mt-2">
             {data.map((time: any) => {
               return time.available ? (
@@ -122,12 +122,12 @@ const ReservationCard = ({
                   href={`/reserve/${slug}?date=${day}T${time.time}&partySize=${partySize}`}
                   className="bg-red-600 hover:bg-red-700 w-24 rounded cursor-pointer p-2 text-center text-white mb-3 mr-3"
                 >
-                  <p className="text-sm font-bold">
+                  <p className="text-sm font-bold text-black">
                     {convertToDisplayTime(time.time)}
                   </p>
                 </Link>
               ) : (
-                <p className="bg-gray-300 w-24 p-2 mb-3 mr-3" />
+                <p className="bg-gray-300 w-24 p-2 mb-3 mr-3 text-black" />
               );
             })}
           </div>

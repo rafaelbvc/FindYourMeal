@@ -14,7 +14,7 @@ function SearchSideBar({
     {
       price: PRICE.CHEAP,
       label: "$",
-      className: "border w-full text-reg font-light rounded-l p-2 text-center",
+      className: "border w-full text-reg font-light rounded-l p-2 text-center text-black",
     },
     {
       price: PRICE.REGULAR,
@@ -31,7 +31,7 @@ function SearchSideBar({
   return (
     <div className="w-1/5">
       <div className="border-b pb-4 flex flex-col">
-        <h1 className="mb-2 bold">Region</h1>
+        <h1 className="mb-2 bold text-black">Region</h1>
         {locations.map((location) => (
           <Link
             key={location.id}
@@ -42,14 +42,14 @@ function SearchSideBar({
                 city: location.name,
               },
             }}
-            className="font-light text-reg capitalize"
+            className="font-light text-reg capitalize text-black"
           >
             {location.name}
           </Link>
         ))}
       </div>
       <div className="border-b pb-4 mt-4 flex flex-col">
-        <h1 className="mb-2 bold">Cuisine</h1>
+        <h1 className="mb-2 bold text-black">Cuisine</h1>
         {cuisines.map((cuisine) => (
           <Link
             key={cuisine.id}
@@ -60,14 +60,14 @@ function SearchSideBar({
                 cuisine: cuisine.name,
               },
             }}
-            className="font-light text-reg capitalize"
+            className="font-light text-reg capitalize text-black"
           >
             {cuisine.name}
           </Link>
         ))}
       </div>
       <div className="mt-3 pb-4">
-        <h1 className="mb-2 bold">Price</h1>
+        <h1 className="mb-2 bold text-black">Price</h1>
         <div className="flex">
           {prices.map(({ price, label, className }) => (
             <Link

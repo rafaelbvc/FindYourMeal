@@ -23,11 +23,11 @@ const HeaderReserve = ({
       <div className="mt-5 flex">
         <img src={image} alt="Image" className="w-32 h-18 rounded" />
         <div className="ml-4">
-          <h1 className="text-3xl font-bold">{name}</h1>
+          <h1 className="text-3xl font-bold text-black">{name}</h1>
           <div className="flex mt-3">
-            <p className="mr-6 bold">{format(new Date(date), "ccc, MMM d")}</p>
-            <p className="mr-6">{convertToDisplayTime(time as Time)}</p>
-            <p className="mr-6">
+            <p className="mr-6 bold text-black">{format(new Date(date), "ccc, MMM d")}</p>
+            <p className="mr-6 text-black">{convertToDisplayTime(time as Time)}</p>
+            <p className="mr-6 text-black">
               {partySize} {parseInt(partySize) === 1 ? "person" : "people"}
             </p>
           </div>

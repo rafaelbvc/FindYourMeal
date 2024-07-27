@@ -23,8 +23,8 @@ export default function Ratings({reviews}: { reviews: ReviewType[] }) {
       <div className="ratings mt-2 flex items-center">
         <div>{Stars(calculateReviewRatingAverage(reviews))}</div>
         <div className="text-reg ml-3">{calculateReviewRatingAverage(reviews).toFixed(1)}</div>
-        {reviews.length <= 1  ? (<p className="ml-2">{`${reviews.length} Review`}</p>):(
-              <p className="ml-2">{`${reviews.length} Reviews`}</p>
+        {reviews.length <= 1  ? (<p className="ml-2 text-black">{`${reviews.length} Review`}</p>):(
+              <p className="ml-2 text-black">{`${reviews.length} Reviews`}</p>
             )}
       </div>
     </div>

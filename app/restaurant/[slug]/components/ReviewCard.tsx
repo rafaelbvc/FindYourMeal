@@ -20,7 +20,7 @@ function ReviewCard({ review }: ReviewCardType) {
               1
             )} ${review.last_name.slice(0, 1)}`}</h2>
           </div>
-          <p className="text-center">
+          <p className="text-center text-black">
             {" "}
             {review.first_name} <p />
             {review.last_name}
@@ -32,7 +32,7 @@ function ReviewCard({ review }: ReviewCardType) {
               <div className="flex mr-5 mb-2">
                 {Stars(review.rating)}
               </div>
-              <p className="text-lg font-light">{review.text}</p>
+              <p className="text-lg font-light text-black">{review.text}</p>
             </div>
           </div>
         </div>

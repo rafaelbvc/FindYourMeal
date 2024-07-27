@@ -119,7 +119,7 @@ export default function AuthModal({ isSignin }: { isSignin: boolean }) {
                 </p>
               </div>
               <div className="m-auto">
-                <h2 className="text-2xl font-light text-center">
+                <h2 className="text-2xl font-light text-center text-black">
                   {handleSigninSignup(
                     "Log Into Your Account",
                     "Create Your OpenTable Account"

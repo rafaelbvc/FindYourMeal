@@ -29,7 +29,7 @@ async function Search({ searchParams }: { searchParams: SearchParamsType }) {
               />
             ))
           ) : (
-            <p>Sorry, we found no restaurants in this area</p>
+            <p className="text-black">Sorry, we found no restaurants in this area</p>
           )}
         </div>
       </div>

@@ -1,7 +1,7 @@
 export default function Description({description}: {description: string}) {
   return (
     <div className="mt-4">
-      <p className="text-lg font-light">
+      <p className="text-lg font-light text-black">
         {description}
       </p>
     </div>

@@ -1,7 +1,7 @@
 export default function Images({ images }: { images: string[] }) {
   return (
     <div>
-      <h1 className="font-bold text-3xl mt-10 mb-7 border-b pb-5">
+      <h1 className="font-bold text-3xl mt-10 mb-7 border-b pb-5 text-black">
          {images.length === 1 ? <h1>1 Photo</h1> : <h1>{images.length} Photos</h1>}      
       </h1>
       <div className="flex flex-wrap">
