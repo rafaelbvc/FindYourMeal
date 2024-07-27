@@ -89,7 +89,7 @@ export default function AuthModal({ isSignin }: { isSignin: boolean }) {
       <button
         className={`${handleSigninSignup(
           "bg-blue-400 text-white hover:bg-blue-500 whitespace-nowrap",
-          ""
+          "text-black"
         )} border p-1 px-4 rounded mr-3  hover:bg-gray-100 whitespace-nowrap`}
         onClick={handleOpen}
       >
