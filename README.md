@@ -1,3 +1,27 @@
+# Find Your Meal
+A food discovery web app built with Next.js 13 and TypeScript.
+
+## Tech Stack
+- Next.js 13
+- TypeScript
+- Tailwind CSS
+- Node backend API
+
+## Features
+- Search meals
+- Responsive UI
+- API consumption
+
+## Live Demo
+https://findyourmeal-rbvc.vercel.app/
+
+## How to run
+npm install
+npm run dev
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # TODO | Reserve - Title
 
 # TODO | Search - Loading / Error / Not-found / Title
